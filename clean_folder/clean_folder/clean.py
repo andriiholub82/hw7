@@ -2,6 +2,7 @@ import shutil
 import sys
 from pathlib import Path
 
+FILE_TXT = "clean_folder/dict_dir.txt"
 
 def read_folder(work_dir):
     """Функія приймає шлях до робочої папки й повертає список папок й файлів"""
@@ -40,7 +41,7 @@ def create_folder(dict, work_dir):
 
 def sort_files(work_dir: Path):
     """Функція сортування файлів та видалення пустих папок"""
-    ext_dict = create_dict("dict_dir.txt")
+    ext_dict = create_dict(FILE_TXT)
     list_file, list_folder = read_folder(work_dir)
     for file in list_file:
         file = Path(file)
@@ -96,9 +97,9 @@ def start_sorting():
             'Enter path for folder: ')  # якщо користувач не ввів шлях, при запуску скрипта - то просимо його ввести зараз
 
     work_dir = Path(path)
-    create_dict("dict_dir.txt")
+    create_dict(FILE_TXT)
     read_folder(work_dir)
-    create_folder(create_dict("dict_dir.txt"), work_dir)
+    create_folder(create_dict(FILE_TXT), work_dir)
     print(sort_files(work_dir))
 
 
