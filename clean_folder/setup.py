@@ -9,6 +9,7 @@ setup(
     author_email='andrii.holub82@gmail.com',
     license='MIT',
     packages=['clean_folder'],
+    data_files=[('clean_folder', ['clean_folder/dict_dir.txt'])],
     include_package_data=True,
     entry_points={'console_scripts': [
         'clean-folder = clean_folder.clean:start_sorting']}
