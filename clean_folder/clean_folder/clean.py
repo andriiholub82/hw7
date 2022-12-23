@@ -86,7 +86,7 @@ def normalize(name):
     return name.translate(TRANS)
 
 
-def main():
+def start_sorting():
     """Головна функція скрипта"""
     try:
         path = sys.argv[1]
@@ -103,4 +103,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    start_sorting()
